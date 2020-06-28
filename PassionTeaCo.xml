@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Passion_Tea_Company_Test_Suite" preserve-order="true" parallel="false" thread-count="1" verbose="2">
+
+    <!--  test groups -->
+    <groups>
+        <run>
+            <include name="PASSION_TEA"/>
+            <exclude name=""/>
+        </run>
+    </groups>
+
+    <!--  test listeners -->
+    <listeners>
+        <listener class-name="com.deesite.listeners.TestNG_ConsoleRunner"/>
+        <listener class-name="com.deesite.listeners.ExtentTestNGIReporterListener"/>
+    </listeners>
+
+    <!--  suite parameters -->
+    <parameter name="environment" value="local"/>
+
+    <!--  tests -->
+    <test name="Passion Tea Co Test - Chrome">
+        <!-- test parameters -->
+        <parameter name="browser" value="chrome"/>
+        <parameter name="platform" value="Mac"/>
+        <parameter name="browserPrefs" value="intl.accept_languages:fr" />
+        <!--<parameter name="includePattern" value="" />
+        <parameter name="excludePattern" value="" />-->
+
+        <classes>
+            <class name="com.deesite.webtest.PassionTeaCoTest"/>
+        </classes>
+    </test>
+
+    <test name="Passion Tea Co Test - Firefox">
+        <!-- test parameters -->
+        <parameter name="browser" value="firefox"/>
+        <parameter name="platform" value="Mac"/>
+        <!--<parameter name="includePattern" value="." />
+        <parameter name="excludePattern" value="" />-->
+
+        <classes>
+            <class name="com.deesite.webtest.PassionTeaCoTest"/>
+        </classes>
+    </test>
+
+    <test name="Passion Tea Co Test - Microsoft Edge">
+        <!-- test parameters -->
+        <parameter name="browser" value="microsoftedge"/>
+        <parameter name="platform" value="mac"/>
+        <!--<parameter name="includePattern" value="" />
+        <parameter name="excludePattern" value="" />-->
+
+        <classes>
+            <class name="com.deesite.webtest.PassionTeaCoTest"/>
+        </classes>
+    </test>
+
+    <test name="Passion Tea Co Test - Safari">
+        <!-- test parameters -->
+        <parameter name="browser" value="safari"/>
+        <parameter name="platform" value="mac"/>
+        <!--<parameter name="includePattern" value="" />
+        <parameter name="excludePattern" value="" />-->
+
+        <classes>
+            <class name="com.deesite.webtest.PassionTeaCoTest"/>
+        </classes>
+    </test>
+
+
+    <test name="Passion Tea Co Test - IE11">
+        <!-- test parameters -->
+        <parameter name="browser" value="internet explorer"/>
+        <parameter name="platform" value="Mac"/>
+        <!--<parameter name="includePattern" value="" />
+        <parameter name="excludePattern" value="" />-->
+
+        <classes>
+            <class name="com.deesite.webtest.PassionTeaCoTest"/>
+        </classes>
+    </test>
+
+
+
+</suite>
