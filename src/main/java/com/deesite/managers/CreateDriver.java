@@ -28,10 +28,10 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Selenium Singleton Class
- *
- * @author Deepak Arora
- */
+* Selenium Singleton Class
+*
+* @author Deepak Arora
+*/
 public class CreateDriver {
     // local variables
     private static CreateDriver instance = null;
